@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Voice Translate and Speak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Real-Time Voice Translate and Speak</h1>
+
+    <label for="input-language-select">Select Input Language:</label>
+    <select id="input-language-select">
+        <option value="af-ZA">Afrikaans</option>
+        <option value="sq-AL">Albanian</option>
+        <option value="am-ET">Amharic</option>
+        <option value="ar-SA">Arabic</option>
+        <option value="hy-AM">Armenian</option>
+        <option value="az-AZ">Azerbaijani</option>
+        <option value="eu-ES">Basque</option>
+        <option value="be-BY">Belarusian</option>
+        <option value="bn-BD">Bengali</option>
+        <option value="bs-BA">Bosnian</option>
+        <option value="bg-BG">Bulgarian</option>
+        <option value="ca-ES">Catalan</option>
+        <option value="ceb-PH">Cebuano</option>
+        <option value="ny-MW">Chichewa</option>
+        <option value="zh-CN">Chinese (Simplified)</option>
+        <option value="zh-TW">Chinese (Traditional)</option>
+        <option value="co-FR">Corsican</option>
+        <option value="hr-HR">Croatian</option>
+        <option value="cs-CZ">Czech</option>
+        <option value="da-DK">Danish</option>
+        <option value="nl-NL">Dutch</option>
+        <option value="en-US">English</option>
+        <option value="eo-EU">Esperanto</option>
+        <option value="et-EE">Estonian</option>
+        <option value="tl-PH">Filipino</option>
+        <option value="fi-FI">Finnish</option>
+        <option value="fr-FR">French</option>
+        <option value="fy-NL">Frisian</option>
+        <option value="gl-ES">Galician</option>
+        <option value="ka-GE">Georgian</option>
+        <option value="de-DE">German</option>
+        <option value="el-GR">Greek</option>
+        <option value="gu-IN">Gujarati</option>
+        <option value="ht-HT">Haitian Creole</option>
+        <option value="ha-NG">Hausa</option>
+        <option value="haw-US">Hawaiian</option>
+        <option value="iw-IL">Hebrew</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="hmn-CN">Hmong</option>
+        <option value="hu-HU">Hungarian</option>
+        <option value="is-IS">Icelandic</option>
+        <option value="ig-NG">Igbo</option>
+        <option value="id-ID">Indonesian</option>
+        <option value="ga-IE">Irish</option>
+        <option value="it-IT">Italian</option>
+        <option value="ja-JP">Japanese</option>
+        <option value="jw-ID">Javanese</option>
+        <option value="kn-IN">Kannada</option>
+        <option value="kk-KZ">Kazakh</option>
+        <option value="km-KH">Khmer</option>
+        <option value="rw-RW">Kinyarwanda</option>
+        <option value="ko-KR">Korean</option>
+        <option value="ku-TR">Kurdish (Kurmanji)</option>
+        <option value="ky-KG">Kyrgyz</option>
+        <option value="lo-LA">Lao</option>
+        <option value="la-VA">Latin</option>
+        <option value="lv-LV">Latvian</option>
+        <option value="lt-LT">Lithuanian</option>
+        <option value="lb-LU">Luxembourgish</option>
+        <option value="mk-MK">Macedonian</option>
+        <option value="mg-MG">Malagasy</option>
+        <option value="ms-MY">Malay</option>
+        <option value="ml-IN">Malayalam</option>
+        <option value="mt-MT">Maltese</option>
+        <option value="mi-NZ">Maori</option>
+        <option value="mr-IN">Marathi</option>
+        <option value="mn-MN">Mongolian</option>
+        <option value="my-MM">Myanmar (Burmese)</option>
+        <option value="ne-NP">Nepali</option>
+        <option value="no-NO">Norwegian</option>
+        <option value="or-IN">Odia</option>
+        <option value="ps-AF">Pashto</option>
+        <option value="fa-IR">Persian</option>
+        <option value="pl-PL">Polish</option>
+        <option value="pt-PT">Portuguese</option>
+        <option value="pa-IN">Punjabi</option>
+        <option value="ro-RO">Romanian</option>
+        <option value="ru-RU">Russian</option>
+        <option value="sm-WS">Samoan</option>
+        <option value="gd-GB">Scots Gaelic</option>
+        <option value="sr-RS">Serbian</option>
+        <option value="st-ZA">Sesotho</option>
+        <option value="sn-ZW">Shona</option>
+        <option value="sd-PK">Sindhi</option>
+        <option value="si-LK">Sinhala</option>
+        <option value="sk-SK">Slovak</option>
+        <option value="sl-SI">Slovenian</option>
+        <option value="so-SO">Somali</option>
+        <option value="es-ES">Spanish</option>
+        <option value="su-ID">Sundanese</option>
+        <option value="sw-KE">Swahili</option>
+        <option value="sv-SE">Swedish</option>
+        <option value="tg-TJ">Tajik</option>
+        <option value="ta-IN">Tamil</option>
+        <option value="tt-RU">Tatar</option>
+        <option value="te-IN">Telugu</option>
+        <option value="th-TH">Thai</option>
+        <option value="tr-TR">Turkish</option>
+        <option value="tk-TM">Turkmen</option>
+        <option value="uk-UA">Ukrainian</option>
+        <option value="ur-PK">Urdu</option>
+        <option value="ug-CN">Uyghur</option>
+        <option value="uz-UZ">Uzbek</option>
+        <option value="vi-VN">Vietnamese</option>
+        <option value="cy-GB">Welsh</option>
+        <option value="xh-ZA">Xhosa</option>
+        <option value="yi-YD">Yiddish</option>
+        <option value="yo-NG">Yoruba</option>
+        <option value="zu-ZA">Zulu</option>
+    </select>
+    
+    <br><br>
+    
+    <label for="language-select">Select Output Language:</label>
+    <select id="language-select">
+        <option value="af-ZA">Afrikaans</option>
+        <option value="sq-AL">Albanian</option>
+        <option value="am-ET">Amharic</option>
+        <option value="ar-SA">Arabic</option>
+        <option value="hy-AM">Armenian</option>
+        <option value="az-AZ">Azerbaijani</option>
+        <option value="eu-ES">Basque</option>
+        <option value="be-BY">Belarusian</option>
+        <option value="bn-BD">Bengali</option>
+        <option value="bs-BA">Bosnian</option>
+        <option value="bg-BG">Bulgarian</option>
+        <option value="ca-ES">Catalan</option>
+        <option value="ceb-PH">Cebuano</option>
+        <option value="ny-MW">Chichewa</option>
+        <option value="zh-CN">Chinese (Simplified)</option>
+        <option value="zh-TW">Chinese (Traditional)</option>
+        <option value="co-FR">Corsican</option>
+        <option value="hr-HR">Croatian</option>
+        <option value="cs-CZ">Czech</option>
+        <option value="da-DK">Danish</option>
+        <option value="nl-NL">Dutch</option>
+        <option value="en-US">English</option>
+        <option value="eo-EU">Esperanto</option>
+        <option value="et-EE">Estonian</option>
+        <option value="tl-PH">Filipino</option>
+        <option value="fi-FI">Finnish</option>
+        <option value="fr-FR">French</option>
+        <option value="fy-NL">Frisian</option>
+        <option value="gl-ES">Galician</option>
+        <option value="ka-GE">Georgian</option>
+        <option value="de-DE">German</option>
+        <option value="el-GR">Greek</option>
+        <option value="gu-IN">Gujarati</option>
+        <option value="ht-HT">Haitian Creole</option>
+        <option value="ha-NG">Hausa</option>
+        <option value="haw-US">Hawaiian</option>
+        <option value="iw-IL">Hebrew</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="hmn-CN">Hmong</option>
+        <option value="hu-HU">Hungarian</option>
+        <option value="is-IS">Icelandic</option>
+        <option value="ig-NG">Igbo</option>
+        <option value="id-ID">Indonesian</option>
+        <option value="ga-IE">Irish</option>
+        <option value="it-IT">Italian</option>
+        <option value="ja-JP">Japanese</option>
+        <option value="jw-ID">Javanese</option>
+        <option value="kn-IN">Kannada</option>
+        <option value="kk-KZ">Kazakh</option>
+        <option value="km-KH">Khmer</option>
+        <option value="rw-RW">Kinyarwanda</option>
+        <option value="ko-KR">Korean</option>
+        <option value="ku-TR">Kurdish (Kurmanji)</option>
+        <option value="ky-KG">Kyrgyz</option>
+        <option value="lo-LA">Lao</option>
+        <option value="la-VA">Latin</option>
+        <option value="lv-LV">Latvian</option>
+        <option value="lt-LT">Lithuanian</option>
+        <option value="lb-LU">Luxembourgish</option>
+        <option value="mk-MK">Macedonian</option>
+        <option value="mg-MG">Malagasy</option>
+        <option value="ms-MY">Malay</option>
+        <option value="ml-IN">Malayalam</option>
+        <option value="mt-MT">Maltese</option>
+        <option value="mi-NZ">Maori</option>
+        <option value="mr-IN">Marathi</option>
+        <option value="mn-MN">Mongolian</option>
+        <option value="my-MM">Myanmar (Burmese)</option>
+        <option value="ne-NP">Nepali</option>
+        <option value="no-NO">Norwegian</option>
+        <option value="or-IN">Odia</option>
+        <option value="ps-AF">Pashto</option>
+        <option value="fa-IR">Persian</option>
+        <option value="pl-PL">Polish</option>
+        <option value="pt-PT">Portuguese</option>
+        <option value="pa-IN">Punjabi</option>
+        <option value="ro-RO">Romanian</option>
+        <option value="ru-RU">Russian</option>
+        <option value="sm-WS">Samoan</option>
+        <option value="gd-GB">Scots Gaelic</option>
+        <option value="sr-RS">Serbian</option>
+        <option value="st-ZA">Sesotho</option>
+        <option value="sn-ZW">Shona</option>
+        <option value="sd-PK">Sindhi</option>
+        <option value="si-LK">Sinhala</option>
+        <option value="sk-SK">Slovak</option>
+        <option value="sl-SI">Slovenian</option>
+        <option value="so-SO">Somali</option>
+        <option value="es-ES">Spanish</option>
+        <option value="su-ID">Sundanese</option>
+        <option value="sw-KE">Swahili</option>
+        <option value="sv-SE">Swedish</option>
+        <option value="tg-TJ">Tajik</option>
+        <option value="ta-IN">Tamil</option>
+        <option value="tt-RU">Tatar</option>
+        <option value="te-IN">Telugu</option>
+        <option value="th-TH">Thai</option>
+        <option value="tr-TR">Turkish</option>
+        <option value="tk-TM">Turkmen</option>
+        <option value="uk-UA">Ukrainian</option>
+        <option value="ur-PK">Urdu</option>
+        <option value="ug-CN">Uyghur</option>
+        <option value="uz-UZ">Uzbek</option>
+        <option value="vi-VN">Vietnamese</option>
+        <option value="cy-GB">Welsh</option>
+        <option value="xh-ZA">Xhosa</option>
+        <option value="yi-YD">Yiddish</option>
+        <option value="yo-NG">Yoruba</option>
+        <option value="zu-ZA">Zulu</option>
+    </select>
+    
+    <br><br>
+    
+    <button onclick="startRecognition()">Start Real-Time Translation</button>
+    <button onclick="stopRecognition()">Stop Translation</button>
+    
+    <p id="result"></p>
+
+    <script>
+        let recognition;
+        let isRecognizing = false;
+
+        function startRecognition() {
+            if (isRecognizing) return;
+
+            recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            const inputLanguage = document.getElementById('input-language-select').value;
+            recognition.lang = inputLanguage; // Set the input language based on user selection
+            recognition.interimResults = true; // Enable interim results for real-time processing
+            recognition.continuous = true; // Keep recognition active
+
+            recognition.onstart = function() {
+                isRecognizing = true;
+                document.getElementById('result').innerText = "Listening and Translating...";
+            };
+
+            recognition.onresult = function(event) {
+                let interimTranscript = '';
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    if (event.results[i].isFinal) {
+                        const spokenText = event.results[i][0].transcript.trim();
+                        translateAndSpeak(spokenText);
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+                document.getElementById('result').innerText = `You said: ${interimTranscript}`;
+            };
+
+            recognition.onerror = function(event) {
+                console.error('Error occurred in recognition: ' + event.error);
+            };
+
+            recognition.onend = function() {
+                if (isRecognizing) recognition.start(); // Restart recognition if stopped unintentionally
+            };
+
+            recognition.start();
+        }
+
+        function stopRecognition() {
+            if (isRecognizing && recognition) {
+                recognition.stop();
+                isRecognizing = false;
+                document.getElementById('result').innerText = "Translation stopped.";
+            }
+        }
+
+        function translateAndSpeak(text) {
+            const selectedLanguage = document.getElementById('language-select').value;
+            const apiUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${document.getElementById('input-language-select').value}&tl=${selectedLanguage}&dt=t&q=${encodeURI(text)}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const translatedText = data[0][0][0];
+                    document.getElementById('result').innerText = `Translated: ${translatedText}`;
+                    speakText(translatedText, selectedLanguage);
+                })
+                .catch(error => console.error('Error with translation:', error));
+        }
+
+        function speakText(text, language) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = language;
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
