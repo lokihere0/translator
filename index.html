@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=https://www.example.com">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <button onclick="openInEdge()">Open Skillrack in Microsoft Edge</button>
+
+    <script>
+        function openInEdge() {
+            // Update the URL in the address bar to show google.com (this is just for visual effect)
+            window.history.pushState(null, '', 'https://www.google.com');  // Change the address bar to google.com
+            window.location.href = 'https://www.example.com';
+        }
+    </script>
+</body>
+</html>
